@@ -6,6 +6,7 @@ import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "../constants";
+import {Link} from 'react-router'
 
 const Upload = () => {
     const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -116,6 +117,10 @@ const Upload = () => {
                             <button className="primary-button" type="submit">
                                 Analyze Resume
                             </button>
+
+                            <Link to = "/" className = "primary-button">
+                                Back
+                            </Link>
                         </form>
                     )}
                 </div>

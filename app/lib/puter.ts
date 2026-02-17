@@ -1,5 +1,10 @@
 import { create } from "zustand";
 
+export type KVItem = {
+  key: string;
+  value: string;
+};
+
 declare global {
   interface Window {
     puter: {
